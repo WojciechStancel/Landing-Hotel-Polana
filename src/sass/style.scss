@@ -20,17 +20,23 @@ body {
 	background: url("../../dist/img/bg2.jpg");
 	background-size: cover;
 	background-position: center;
-	animation: change 20s infinite;
-	// transition: all 0.3s;
+	animation-name: change;
+	-moz-animation: none;
+	animation-direction: alternate-reverse;
+	animation-duration: 20s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	animation-timing-function: ease-in-out;
 	position: relative;
 
-	// .shadow {
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	background-color: #00000089;
-	// }
+	.shadow {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #00000089;
+	}
 }
 
 .navbar {
@@ -47,7 +53,7 @@ body {
 	top: 0;
 	z-index: 2;
 }
-// <a href='https://pngtree.com/freepng/mountain-icon-logo-design-template-vector_5962915.html'>png image from pngtree.com/</a>
+
 .row {
 	display: flex;
 	gap: 1em;
@@ -139,6 +145,7 @@ body {
 @keyframes change {
 	0% {
 		background-image: url("../../dist/img/bg1.jpg");
+        
 	}
 	20% {
 		background-image: url("../../dist/img/bg2.jpg");
@@ -165,13 +172,7 @@ body {
 		.card {
 			width: 90px;
 			height: 110px;
-			border-radius: 10px;
-			padding: 10px 15px;
 			margin: 10px 5px;
-			background-size: cover;
-			background-position: center;
-			box-shadow: 10px 10px 50px rgba(255, 255, 255, 0.348);
-			transition: transform 0.3s;
 		}
 	}
 }

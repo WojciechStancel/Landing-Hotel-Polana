@@ -6,6 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Polana | Landing Page</title>
     <link rel="stylesheet" href="dist/css/style.min.css">
+    <script>
+        // Preload images before starting the animation
+        function preloadImages(images, callback) {
+            let loaded = 0;
+            const totalImages = images.length;
+            images.forEach(src => {
+                const img = new Image();
+                img.onload = () => {
+                    loaded++;
+                    if (loaded === totalImages) {
+                        callback();
+                    }
+                };
+                img.src = src;
+            });
+
+        }
+
+        // Start animation after preloading images
+        function startAnimation() {
+            const container = document.querySelector('.container');
+            container.style.animationPlayState = 'running';
+        }
+
+        // Images to preload
+        const imagesToPreload = [
+            "../../dist/img/bg1.jpg",
+            "../../dist/img/bg2.jpg",
+            "../../dist/img/bg3.jpg",
+            "../../dist/img/bg4.jpg",
+            "../../dist/img/bg5.jpg",
+            "../../dist/img/bg6.jpg",
+            "../../dist/img/hotel1.jpg",
+            "../../dist/img/hotel5.jpg",
+            "../../dist/img/hotel3.jpg",
+            "../../dist/img/hotel4.jpg"
+        ];
+
+        // Preload images and start animation
+        window.onload = function () {
+            preloadImages(imagesToPreload, startAnimation);
+        };
+    </script>
 </head>
 
 <body>
