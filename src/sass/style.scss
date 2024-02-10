@@ -20,7 +20,8 @@ body {
 	background: url("../../dist/img/bg2.jpg");
 	background-size: cover;
 	background-position: center;
-	animation: change 20s infinite ease-in-out;
+	animation: change 20s infinite;
+	// transition: all 0.3s;
 	position: relative;
 
 	.shadow {
@@ -43,7 +44,7 @@ body {
 	cursor: pointer;
 	filter: invert(1);
 	position: absolute;
-    top: 0;
+	top: 0;
 	z-index: 2;
 }
 // <a href='https://pngtree.com/freepng/mountain-icon-logo-design-template-vector_5962915.html'>png image from pngtree.com/</a>
@@ -148,8 +149,11 @@ body {
 	60% {
 		background-image: url("../../dist/img/bg4.jpg");
 	}
-	100% {
+	80% {
 		background-image: url("../../dist/img/bg5.jpg");
+	}
+	100% {
+		background-image: url("../../dist/img/bg6.jpg");
 	}
 }
 
