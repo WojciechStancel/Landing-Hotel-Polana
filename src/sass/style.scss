@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;700&display=swap");
+
+html,
+body,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "M PLUS Rounded 1c", serif;
+	color: white;
+	font-size: 2rem;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	background: url("../../dist/img/bg2.jpg");
+	background-size: cover;
+	background-position: center;
+	animation: change 30s infinite ease-in both;
+	position: relative;
+
+	.shadow {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #00000089;
+		position: absolute;
+		z-index: 1;
+	}
+}
+
+.navbar {
+	margin-bottom: 1em;
+	display: flex;
+	padding-left: 1em;
+}
+
+.logo {
+	width: 70px;
+	cursor: pointer;
+	filter: invert(1);
+	position: absolute;
+	z-index: 1;
+}
+// <a href='https://pngtree.com/freepng/mountain-icon-logo-design-template-vector_5962915.html'>png image from pngtree.com/</a>
+.row {
+	display: flex;
+	gap: 1em;
+	margin-top: 0.5em;
+	width: 100%;
+	flex-direction: column;
+	padding: 1em;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.col {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	h1 {
+		font-size: 1.7rem;
+	}
+
+	p {
+		font-size: 0.8rem;
+	}
+
+	button {
+		width: 140px;
+		color: #000;
+		font-size: 0.7rem;
+		padding: 0.7em 1em;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		outline: none;
+		transition: all 0.3s;
+
+		&:hover,
+		&:focus {
+			background-color: rgb(38, 118, 75);
+			color: white;
+			border: 1px solid rgba(0, 128, 0, 0.509);
+		}
+	}
+
+	.card {
+		width: 125px;
+		height: 155px;
+		border-radius: 10px;
+		padding: 10px 15px;
+		margin: 10px 11px;
+		background-size: cover;
+		background-position: center;
+		box-shadow: 10px 10px 50px rgba(255, 255, 255, 0.348);
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: translateY(-10px);
+			box-shadow: 10px 10px 40px rgba(255, 255, 255, 0.841);
+		}
+	}
+
+	.card1 {
+		background-image: url("../../dist/img/hotel1.jpg");
+	}
+
+	.card2 {
+		background-image: url("../../dist/img/hotel5.jpg");
+	}
+	.card3 {
+		background-image: url("../../dist/img/hotel3.jpg");
+	}
+	.card4 {
+		background-image: url("../../dist/img/hotel4.jpg");
+	}
+}
+
+.col1 {
+	flex-direction: column;
+	gap: 0.5em;
+	padding: 0 0.5em;
+}
+
+.col2 {
+	flex-wrap: wrap;
+}
+
+@keyframes change {
+	0% {
+		background: url("../../dist/img/bg1.jpg");
+	}
+	20% {
+		background: url("../../dist/img/bg2.jpg");
+	}
+	40% {
+		background: url("../../dist/img/bg3.jpg");
+	}
+	60% {
+		background: url("../../dist/img/bg4.jpg");
+	}
+	100% {
+		background: url("../../dist/img/bg5.jpg");
+	}
+}
+
+@media (max-width: 330px) {
+	.row {
+		padding: 0;
+	}
+	.col {
+		.card {
+			width: 90px;
+			height: 110px;
+			border-radius: 10px;
+			padding: 10px 15px;
+			margin: 10px 5px;
+			background-size: cover;
+			background-position: center;
+			box-shadow: 10px 10px 50px rgba(255, 255, 255, 0.348);
+			transition: transform 0.3s;
+		}
+	}
+}
+
+@media (max-height: 380px) {
+    .col2 {
+        height: 125px;
+    }
+	.col {
+		.card {
+			width: 90px;
+			height: 120px;
+			margin: 10px 5px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.col {
+		display: flex;
+
+		h1 {
+			font-size: 3rem;
+		}
+
+		p {
+			font-size: 1.2rem;
+		}
+
+		button {
+			width: 200px;
+			font-size: 1rem;
+			padding: 0.5em 1em;
+		}
+
+		.card {
+			width: 200px;
+			height: 220px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.row {
+		flex-direction: row;
+		align-items: center;
+		height: 70%;
+	}
+	.col {
+		display: flex;
+
+		h1 {
+			font-size: 5rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+
+		button {
+			width: 200px;
+			font-size: 1rem;
+			padding: 0.5em 1em;
+		}
+
+		.card {
+			width: 160px;
+			height: 200px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.logo {
+		width: 100px;
+	}
+	.col {
+		display: flex;
+
+		h1 {
+			font-size: 5rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+
+		button {
+			width: 200px;
+			font-size: 1rem;
+			padding: 0.5em 1em;
+		}
+
+		.card {
+			width: 200px;
+			height: 230px;
+			margin: 10px 14px;
+		}
+	}
+}
+@media (min-width: 1400px) {
+	.logo {
+		width: 120px;
+	}
+	.row {
+		padding: 1em 2em;
+		max-width: 1600px;
+	}
+	.col {
+		p {
+			font-size: 1.3rem;
+		}
+
+		.card {
+			width: 300px;
+			height: 370px;
+			margin: 10px 15px;
+		}
+	}
+}
